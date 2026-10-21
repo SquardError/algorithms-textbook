@@ -1,0 +1,9 @@
+.venv/
+_build/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+code/output/
+# Course materials stay local (not redistributed)
+docs/lectures/
+docs/task.pdf

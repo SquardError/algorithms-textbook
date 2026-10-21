@@ -1,0 +1,56 @@
+version: 1
+project:
+  id: algorithms-textbook-analysis
+  title: Analysis of Algorithms — A Friendly Textbook
+  subtitle: Mathematical analysis of nonrecursive and recursive algorithms
+  description: An e-textbook for bachelor's students based on Levitin, Introduction to the Design and Analysis of Algorithms (3rd ed.), Sections 2.3–2.5.
+  authors:
+    - name: Batyrkhan Tynyshtykbayev
+  license: CC-BY-4.0
+  github: https://github.com/SquardError/algorithms-textbook
+  keywords:
+    - analysis of algorithms
+    - summations
+    - recurrence relations
+    - order of growth
+  exclude:
+    - CLAUDE.md
+    - README.md
+    - docs/**
+    - code/**
+  numbering:
+    headings: false
+    equation: false
+  toc:
+    - file: index.md
+    - file: intro.md
+    - title: "Module 1 · Nonrecursive algorithms"
+      children:
+        - file: module1/00_goals.md
+        - file: module1/01_general_plan.md
+        - file: module1/02_summation_tools.md
+        - file: module1/03_worked_examples.md
+        - file: module1/04_average_case.md
+        - file: module1/05_typical_mistakes.md
+        - file: module1/06_empirical_verification.md
+        - file: module1/07_quiz.md
+        - file: module1/08_problems.md
+        - file: module1/09_summary_cheatsheet.md
+    - title: "Module 2 · Recursive algorithms"
+      children:
+        - file: module2/00_goals.md
+        - file: module2/01_general_plan.md
+        - file: module2/02_backward_substitution.md
+        - file: module2/03_worked_examples.md
+        - file: module2/04_fibonacci_warning.md
+        - file: module2/05_recursion_vs_iteration.md
+        - file: module2/06_quiz.md
+        - file: module2/07_problems.md
+        - file: module2/08_summary_cheatsheet.md
+    - file: glossary.md
+    - file: sources.md
+site:
+  template: book-theme
+  options:
+    logo_text: Analysis of Algorithms
+    folders: true

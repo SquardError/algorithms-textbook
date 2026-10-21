@@ -1,0 +1,9 @@
+# Book build
+jupyter-book==2.1.7
+jupyterquiz==2.9.6.4
+ipykernel==7.4.0
+jupyter-server==2.21.1
+# Charts, verification and experiments
+matplotlib==3.11.2
+numpy==2.4.6
+sympy==1.14.0
