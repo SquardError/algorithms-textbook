@@ -7,3 +7,6 @@ code/output/
 # Course materials stay local (not redistributed)
 docs/lectures/
 docs/task.pdf
+
+# Local AI assistant instructions
+CLAUDE.md
