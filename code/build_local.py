@@ -45,7 +45,9 @@ def main() -> int:
             print("Jupyter server did not start", file=sys.stderr)
             return 1
         env = dict(os.environ, JUPYTER_BASE_URL=url, JUPYTER_TOKEN=token)
-        jb = shutil.which("jupyter-book") or "jupyter-book"
+        # Look next to this interpreter first, so the venv need not be activated
+        scripts = os.path.dirname(sys.executable)
+        jb = shutil.which("jupyter-book", path=scripts) or shutil.which("jupyter-book") or "jupyter-book"
         args = [jb, "start", "--execute"] if mode == "start" else [jb, "build", "--execute", "--html"]
         return subprocess.call(args, env=env)
     finally:
